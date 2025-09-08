@@ -1,0 +1,43 @@
+@url=http://localhost:3000
+
+### Listado de todas las tareas
+GET {{url}}/tareas
+
+### Filtrar tareas completadas
+GET {{url}}/tareas?completada=true
+
+### Filtrar tareas pendientes
+GET {{url}}/tareas?completada=false
+
+### Obtener tarea especifica
+GET {{url}}/tareas/1
+
+### Crear tarea completada
+POST {{url}}/tareas
+Content-Type: application/json
+
+{
+    "nombre": "Terminar tp",
+    "completada": true
+}
+
+### Crear tarea pendiente
+POST {{url}}/tareas
+Content-Type: application/json
+
+{
+    "nombre": "Ver gmail",
+    "completada": false
+}
+
+### Modificar estado de tarea
+PUT {{url}}/tareas/2
+Content-Type: application/json
+
+{
+    "nombre": "Trabajar",
+    "completada": true
+}
+
+### Eliminar tarea
+DELETE {{url}}/tareas/1

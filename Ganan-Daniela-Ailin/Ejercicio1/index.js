@@ -82,7 +82,7 @@ app.post("/calculos", (req, res) => {
 });
 
 
-// PUT modificar calculo
+// Modificar calculo
 app.put("/calculos/:id", (req, res) => {
   const id = Number(req.params.id);
   
