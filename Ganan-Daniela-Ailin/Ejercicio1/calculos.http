@@ -1,0 +1,42 @@
+@url=http://localhost:3000
+
+### Listado de calculos
+GET {{url}}/calculos
+
+
+### Obtener un calculo especifico
+GET {{url}}/calculos/1
+
+
+### Crear calculo rectangulo
+POST {{url}}/calculos
+Content-Type: application/json
+
+{
+    "ancho": 6,
+    "alto": 8
+}
+
+
+### Crear calculo cuadrado
+POST {{url}}/calculos
+Content-Type: application/json
+
+{
+    "ancho": 5,
+    "alto": 5
+}
+
+
+### Modificar calculo
+PUT {{url}}/calculos/1
+Content-Type: application/json
+
+{
+    "ancho": 7,
+    "alto": 9
+}
+
+
+### Eliminar calculo
+DELETE {{url}}/calculos/1
